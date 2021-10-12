@@ -1099,7 +1099,6 @@ Devil.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
         case '🗿': 
         if (isBanned) return reply('Maaf kamu sudah terbenned!') 
         if (!isRegister) return reply(`You are not verified\n\nReply this chat and send bot password\n\nHint : \nPassword contains 4 digit number\nCheck password at: https://dvlgaming.github.io/devilbotz.github.io/`)
-               let Levelnye = level.getLevelingLevel(sender, _level)
                const boy = "6288215463787@s.whatsapp.net"     
                const filename = `@${sender.replace('@s.whatsapp.net', '')}-${moment().unix()}`
                const nomoruser = `${sender.replace('@s.whatsapp.net', '')}-${moment().unix()}`
@@ -1131,7 +1130,7 @@ Devil.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
 𝙁𝙄𝙏𝙐𝙍 : 𝐆𝐊 𝐓𝐀𝐔 𝐌𝐀𝐒𝐈𝐇 𝐏𝐄𝐍𝐆𝐄𝐌𝐁𝐀𝐍𝐆𝐀𝐍
 
 ✑𝑰𝑵𝑭𝑶 𝑼𝑺𝑬𝑹
-𝙇𝙀𝙑𝙀𝙇 : ${Levelnye}
+𝙇𝙀𝙑𝙀𝙇 : cek di allmenu
 𝙇𝙄𝙈𝙄𝙏 : Unlimited
 
 ⨷ 𝑰𝑵𝑫𝑶𝑵𝑬𝑺𝑰𝑨𝑵 𝑻𝑰𝑴𝑬
