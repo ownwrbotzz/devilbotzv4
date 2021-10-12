@@ -1133,10 +1133,8 @@ Devil.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
 𝙇𝙀𝙑𝙀𝙇 : cek di allmenu
 𝙇𝙄𝙈𝙄𝙏 : Unlimited
 
-⨷ 𝑰𝑵𝑫𝑶𝑵𝑬𝑺𝑰𝑨𝑵 𝑻𝑰𝑴𝑬
-𝙒𝙄𝘽 : ${time}
-𝙒𝙄𝙏𝘼 : ${timeMak}
-𝙒𝙄𝙏 : ${timeJay}
+⨷ 𝑻𝑰𝑴𝑬
+𝙟𝙖𝙢 : ${time}
 `, imageMessage: imageMsg,
                buttons: buttons,
                headerType: 4
@@ -4420,7 +4418,7 @@ teks = `*BOT STATISTICS*
           if (banChats === false) return
           uptime = process.uptime()
           banChats = false
-          reply(`𝘿𝘼𝙃 𝙋𝙐𝘽𝙇𝙄𝘾 𝙆𝙊𝙉𝙏𝙊𝙇`)
+          reply(`𝘿𝘼𝙃 𝙋𝙐𝘽𝙇𝙄𝘾 𝙇𝙊𝙍𝘿`)
           break
      case 'self':
            if (!mek.key.fromMe && !isOwner) return

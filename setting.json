@@ -1,12 +1,17 @@
 {
-     "ownerNumber": "6288226487112@s.whatsapp.net",
-     "ownerName": "DevilBotz",
+     "autoread": false,
+     "autoplaymusic": false,
+     "autocomposing": true,
+     "autorecording": true,
+     "ownerNumber": "6288215463787@s.whatsapp.net",
+     "sessionName": "Devil",
+     "ownerName": "DevilStore",
      "gamewaktu": 60,
-     "owner": "6288226487112",
-     "botName": "DevilBotz",
-     "lolkey": "IkyAds",
+     "owner": "6288215463787",
+     "botName": "Botz Devil",
+     "lolkey": "dikyadis",
      "vhtearkey": "FauzanBotz",
      "zekskey": "NinoWangy",
-     "xteamkey": "FuzBot1",
+     "xteamkey": "FuzBot1",  
      "gcount": 20
 }
