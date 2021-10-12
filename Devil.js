@@ -1063,7 +1063,7 @@ _*✗✗✗*_
               
                 
 
-                    Devil.sendMessage(from, { contentText: `${menu}`, footerText: '```Jangan Lupa Bergabung Ya Kak```', buttons: [{ buttonId: `!owner`, buttonText: { displayText: '✗⃝👤OWNER' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: officialgroup, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')                   
+                    Devil.sendMessage(from, { contentText: `${menu}`, footerText: '```Jangan Lupa Bergabung Ya Kak```', buttons: [{ buttonId: `!owner`, buttonText: { displayText: '👤OWNER' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: officialgroup, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')                   
         case 'owner':
         case 'creator':
                sendKontak(from, `${owner}`, `${ownerName}`, 'Sibukk!!')
@@ -1099,6 +1099,7 @@ Devil.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
         case '🗿': 
         if (isBanned) return reply('Maaf kamu sudah terbenned!') 
         if (!isRegister) return reply(`You are not verified\n\nReply this chat and send bot password\n\nHint : \nPassword contains 4 digit number\nCheck password at: https://dvlgaming.github.io/devilbotz.github.io/`)
+               let Levelnye = level.getLevelingLevel(sender, _level)
                const boy = "6288215463787@s.whatsapp.net"     
                const filename = `@${sender.replace('@s.whatsapp.net', '')}-${moment().unix()}`
                const nomoruser = `${sender.replace('@s.whatsapp.net', '')}-${moment().unix()}`
@@ -4230,7 +4231,7 @@ break
 case 'donate':   
 case 'donasi':
              if (isBanned) return reply('Maaf kamu sudah terbenned!')
-            Devil.sendMessage(from, donasj(prefix), MessageType.text, {quoted: ftroli})
+            Devil.sendMessage(from, donasi(prefix), MessageType.text, {quoted: ftroli})
             break
 case 'payment':
              if (isBanned) return reply('Maaf kamu sudah terbenned!')
@@ -4261,7 +4262,7 @@ case 'payment':
        case 'sourcecode': 
        case 'sc': 
        case 'src':
-              textImg(`Bot Ini Menggunakan Sc : BELI DI OWN YANG NO ENC`)
+              textImg(`Bot Ini Menggunakan Sc : https://github.com/dvlgaming/devilbotzv4.git`)
               break
       case 'ping':
       case 'speed':
@@ -4420,14 +4421,14 @@ teks = `*BOT STATISTICS*
           if (banChats === false) return
           uptime = process.uptime()
           banChats = false
-          ftroli(`𝘿𝘼𝙃 𝙋𝙐𝘽𝙇𝙄𝘾 𝙆𝙊𝙉𝙏𝙊𝙇`)
+          fakestatus(`𝘿𝘼𝙃 𝙋𝙐𝘽𝙇𝙄𝘾 𝙆𝙊𝙉𝙏𝙊𝙇`)
           break
      case 'self':
            if (!mek.key.fromMe && !isOwner) return
            if (banChats === true) return
            uptime = process.uptime()
            banChats = true
-           ftroli(`𝙎𝙀𝙇𝙁 𝙇𝙊𝙍𝘿`)
+           fakestatus(`𝙎𝙀𝙇𝙁 𝙇𝙊𝙍𝘿`)
            break       
       case 'leaveall':
              if (!isOwner) return  reply(mess.only.owner)
