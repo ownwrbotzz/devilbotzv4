@@ -199,7 +199,10 @@ module.exports = Devil = async (Devil, mek) => {
 		global.blocked
 		mek.message = (Object.keys(mek.message)[0] === 'ephemeralMessage') ? mek.message.ephemeralMessage.message : mek.message
 		const { text, extendedText, contact, location, liveLocation, image, video, sticker, document, audio, product } = MessageType
-		const time = moment.tz('Asia/Jakarta').format('DD/MM HH:mm:ss')
+	    const tanggal = moment.tz('Asia/Jakarta').format('dddd') + ', ' + moment.tz('Asia/Jakarta').format('LL')
+        const time = moment().tz('Asia/Jakarta').format("HH:mm:ss")
+		const timeMak = moment().tz('Asia/Makassar').format("HH:mm:ss");
+        const timeJay = moment().tz('Asia/Jayapura').format("HH:mm:ss");
 		const content = JSON.stringify(mek.message)
 		const from = mek.key.remoteJid
 		const type = Object.keys(mek.message)[0]        
@@ -891,27 +894,28 @@ const Bfake = fs.readFileSync ('./media/image/fake.jpeg','base64')
    case 'wa': 
                sendKontak(from, `0`, `𝙒𝙝𝙖𝙩𝙨𝘼𝙥𝙥`, 'Sibukk!!')
                break
-//THANKS CASE NYA AKIRA               
-           case 'grupbot':
-               list = []
-               listhelp = [`akiragroup`,`zakgroup`,`dzgroup`,`fauzangroup`,`devilgroup`,`officialgroupbot`]
-               listhelpp = [`AKIRA BOT`,`ZAK BOT`,`DZ BOT`,`FAUZAN BOT`,`DEVIL BOT`,`SEMUA GROUP`]
-               nombor = 1
-               startnum = 0
-               for (let x of listhelp) {
-               const yy = {title: 'Group Bot' + nombor++,
-                    rows: [
-                       {
-                        title: `${listhelpp[startnum++]}`,
-                        description: ``,
-                        rowId: `${prefix}${x}`
-                      }
-                    ]
-                   }
-                        list.push(yy)
-           }
-               listmsg(from, `*Haiii Kak ${pushname}*\n*Pilih Di Bawah*\n*Jangan Lupa Join Ya Kak* ${pushname}\n_*TerimaKasih*_`,`  `, list)
-               break
+//THANKS CASE NYA AKIRA            
+//FITUR INI ERROR/PERBAIKAN JADU GW KUNCI DULU JAN DI BUKA  
+           //case 'grupbot':
+               //list = []
+               //listhelp = [`akiragroup`,`zakgroup`,`dzgroup`,`fauzangroup`,`devilgroup`,`officialgroupbot`]
+               //listhelpp = [`AKIRA BOT`,`ZAK BOT`,`DZ BOT`,`FAUZAN BOT`,`DEVIL BOT`,`SEMUA GROUP`]
+               //nombor = 1
+               //startnum = 0
+               //for (let x of listhelp) {
+               //const yy = {title: 'Group Bot' + nombor++,
+                    //rows: [
+                       //{
+                        //title: `${listhelpp[startnum++]}`,
+                        //description: ``,
+                        //rowId: `${prefix}${x}`
+                      //}
+                    //]
+                   //}
+                        //list.push(yy)
+           //}
+               //listmsg(from, `*Haiii Kak ${pushname}*\n*Pilih Di Bawah*\n*Jangan Lupa Join Ya Kak* ${pushname}\n_*TerimaKasih*_`,`  `, list)
+               //break
              case 'akiragroup':
        thu = await Devil.getStatus(`${sender.split('@')[0]}@s.whatsapp.net`, MessageType.text)
        groups = Devil.chats.array.filter(v => v.jid.endsWith('g.us'))
@@ -1117,24 +1121,29 @@ Devil.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
 
                buttonsMessage = {
                contentText: `${menu}`,
-               footerText: `🤖 𝑺𝑻𝑨𝑻𝑼𝑺 𝑩𝑶𝑻 𝑾𝑨 🤖
-𝘾𝙍𝙀𝘼𝙏𝙊𝙍 : @${owner}
-𝘽𝘼𝙏𝙀𝙍𝘼𝙄 :  ${baterai}%
-𝙋𝙍𝙀𝙁𝙄𝙓 : 𝑴𝒖𝒍𝒕𝒊-𝑷𝒓𝒆𝒇𝒊𝒙
-𝙂𝙍𝙐𝙋 𝙏𝙊𝙏𝘼𝙇 : ${groups.length}
-𝙋𝙍𝙄𝙑𝘼𝙏 𝘾𝙃𝘼𝙏 : ${privat.length}
-𝙏𝙊𝙏𝘼𝙇 𝘾𝙃𝘼𝙏 : ${totalChat.length}
-𝙍𝙐𝙉𝙏𝙄𝙈𝙀 : ${runtime(process.uptime())}
-𝘽𝙊𝙏 𝙈𝙊𝘿𝙀 : ${banChats ? "𝑺𝑬𝑳𝑭-𝑴𝑶𝑫𝑬" : "𝑷𝑼𝑩𝑳𝑰𝑪-𝑴𝑶𝑫𝑬"}
-𝙎𝙋𝙀𝙀𝘿 : ${latensie.toFixed(4)} _Second
-𝙁𝙄𝙏𝙐𝙍 : 𝐆𝐊 𝐓𝐀𝐔 𝐌𝐀𝐒𝐈𝐇 𝐏𝐄𝐍𝐆𝐄𝐌𝐁𝐀𝐍𝐆𝐀𝐍
+               footerText: `┏━━⬣ _*STATUS BOT*_
+┃⬡𝘾𝙍𝙀𝘼𝙏𝙊𝙍 : @${owner}
+┃⬡𝘽𝘼𝙏𝙀𝙍𝘼𝙄 :  ${baterai}%
+┃⬡𝙋𝙍𝙀𝙁𝙄𝙓 : 𝑴𝒖𝒍𝒕𝒊-𝑷𝒓𝒆𝒇𝒊𝒙
+┃⬡𝙂𝙍𝙐𝙋 𝙏𝙊𝙏𝘼𝙇 : ${groups.length}
+┃⬡𝙋𝙍𝙄𝙑𝘼𝙏 𝘾𝙃𝘼𝙏 : ${privat.length}
+┃⬡𝙏𝙊𝙏𝘼𝙇 𝘾𝙃𝘼𝙏 : ${totalChat.length}
+┃⬡𝙍𝙐𝙉𝙏𝙄𝙈𝙀 : ${runtime(process.uptime())}
+┃⬡𝘽𝙊𝙏 𝙈𝙊𝘿𝙀 : ${banChats ? "𝑺𝑬𝑳𝑭-𝑴𝑶𝑫𝑬" : "𝑷𝑼𝑩𝑳𝑰𝑪-𝑴𝑶𝑫𝑬"}
+┃⬡𝙎𝙋𝙀𝙀𝘿 : ${latensie.toFixed(4)} _Second
+┃⬡𝙁𝙄𝙏𝙐𝙍 : 𝐆𝐊 𝐓𝐀𝐔 𝐌𝐀𝐒𝐈𝐇 𝐏𝐄𝐍𝐆𝐄𝐌𝐁𝐀𝐍𝐆𝐀𝐍
+┗⬣
 
-✑𝑰𝑵𝑭𝑶 𝑼𝑺𝑬𝑹
-𝙇𝙀𝙑𝙀𝙇 : cek di allmenu
-𝙇𝙄𝙈𝙄𝙏 : Unlimited
+┏━━⬣ _*INFO USER*_
+┃⬡𝙇𝙀𝙑𝙀𝙇 : cek di allmenu
+┃⬡𝙇𝙄𝙈𝙄𝙏 : Unlimited
+┗⬣
 
-⨷ 𝑻𝑰𝑴𝑬
-𝙟𝙖𝙢 : ${time}
+┏━━⬣ _*INDONESIA TIME*_
+┃⬡⏰ 𝙒𝙄𝘽 : ${time}
+┃⬡⏰ 𝙒𝙄𝙏𝘼 : ${timeMak}
+┃⬡⏰ 𝙒𝙄𝙏 : ${timeJay}
+┗⬣
 `, imageMessage: imageMsg,
                buttons: buttons,
                headerType: 4
