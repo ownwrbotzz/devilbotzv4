@@ -4420,14 +4420,14 @@ teks = `*BOT STATISTICS*
           if (banChats === false) return
           uptime = process.uptime()
           banChats = false
-          fakestatus(`𝘿𝘼𝙃 𝙋𝙐𝘽𝙇𝙄𝘾 𝙆𝙊𝙉𝙏𝙊𝙇`)
+          reply(`𝘿𝘼𝙃 𝙋𝙐𝘽𝙇𝙄𝘾 𝙆𝙊𝙉𝙏𝙊𝙇`)
           break
      case 'self':
            if (!mek.key.fromMe && !isOwner) return
            if (banChats === true) return
            uptime = process.uptime()
            banChats = true
-           fakestatus(`𝙎𝙀𝙇𝙁 𝙇𝙊𝙍𝘿`)
+           reply(`𝙎𝙀𝙇𝙁 𝙇𝙊𝙍𝘿`)
            break       
       case 'leaveall':
              if (!isOwner) return  reply(mess.only.owner)
