@@ -87,4 +87,6 @@ Dan module harus lengkap biar bisa run otomatis
 * [Baileys](https://github.com/baileys)
 * [devilbotz](https://github.com/dvlgaming)
 * [dzz](https://github.com/DzWangy)
+* [zak botz](https://github.com/kizakixd/)
+* [akira](https://github.com/KirBotz)
 
